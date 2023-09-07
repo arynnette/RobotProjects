@@ -20,4 +20,9 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
+
+  public static class VisionConstants {
+    String kCamera1Name = "cam1";
+    String kCamera2Name = "cam2";
+  }
 }
