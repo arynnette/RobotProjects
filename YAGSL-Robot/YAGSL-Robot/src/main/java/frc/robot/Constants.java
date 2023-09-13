@@ -4,6 +4,9 @@
 
 package frc.robot;
 
+import edu.wpi.first.math.geometry.Translation3d;
+import swervelib.math.Matter;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -13,8 +16,16 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+  public static class PhysicalConstants {
+      public static final double ROBOT_MASS = 98.1; // kilograms
+      public static final Matter PHYS_WRIST = new Matter(new Translation3d(0, 0, 0), ROBOT_MASS);
+
+  }
+
   public static class DriveConstants {
       public static final String driveDirectoryName = "swerve";
+      public static final double LOOP_TIME = 1.0;
+
   }
 
   public static class OperatorConstants {
