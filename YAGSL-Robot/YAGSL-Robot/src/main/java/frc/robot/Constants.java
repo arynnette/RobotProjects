@@ -23,6 +23,7 @@ public final class Constants {
   }
 
   public static class DriveConstants {
+      public static final double DRIVE_DEADBAND = 0.05;
       public static final String driveDirectoryName = "swerve";
       public static final double LOOP_TIME = 1.0;
 

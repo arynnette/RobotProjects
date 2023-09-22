@@ -70,10 +70,10 @@ public class SwerveSubsystem extends SubsystemBase {
     return swerve.getYaw();
   }
 
-  public ChassisSpeeds getTargetVelocities(double x, double y, double thetaX, double thetaY) {
+  public ChassisSpeeds getTargetVelocities(double x, double y, Rotation2d theta) {
     x = Math.pow(x, 3);
     y = Math.pow(y, 3);
-    return swerve.getSwerveController().getTargetSpeeds(x, y, thetaX, thetaY, getHeading().getRadians());
+    return swerve.getSwerveController().getTargetSpeeds(x, y, theta.getRadians(), getHeading().getRadians());
   }
 
   public ChassisSpeeds getFieldRelativeVelocity() {
